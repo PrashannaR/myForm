@@ -2,11 +2,15 @@
     <string name="app_name">myForm</string>
     <string name="hello_icon">hello icon</string>
     <string name="fill_up_the_form_to_add_in_your_details">Fill up the form to add in your details</string>
-    <string name="name">name</string>
+    <string name="name">Name</string>
     <string name="phone_number">Phone Number</string>
     <string name="view_or_add_details">View or Add Details</string>
     <string name="proceed_next_to_fill_up_your_details_or_view_details">Proceed next to fill up your details or view added  details</string>
     <string name="proceed_next_to_fill_up_your_details_or_n_view_added_details">Proceed next to fill up your details or \n view added details</string>
     <string name="view_details">View Details</string>
     <string name="add_details">Add Details</string>
+    <string name="add_ndetails">Add \nDetails</string>
+    <string name="e_mail">E-mail</string>
+    <string name="branch">Branch</string>
+    <string name="registration_number">Registration Number</string>
 </resources>
