@@ -13,4 +13,17 @@
     <string name="e_mail">E-mail</string>
     <string name="branch">Branch</string>
     <string name="registration_number">Registration Number</string>
+    <string name="user_ndetails">User \nDetails</string>
+    <string name="none">none</string>
+    <string name="user_name">User Name</string>
+    <string name="sample_email_com">sample@email.com</string>
+    <string name="_98xxxxxxxx">98XXXXXXXX</string>
+    <string name="school_icon">school icon</string>
+    <string name="phone_icon">phone icon</string>
+    <string name="email_icon">email icon</string>
+    <string name="school_name">School Name</string>
+    <string name="reg_number_icon">reg number icon</string>
+    <string name="_21bcexxxx">21BCEXXXX</string>
+    <string name="thankyou">Thank You For Registering Your Details \nPress The Button Below To Register Another User\'s Data</string>
+    <string name="regesiter_another_data">Regesiter Another Data</string>
 </resources>
