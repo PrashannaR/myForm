@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyForm">
         <activity
-            android:name=".View"
+            android:name=".ViewDetails"
             android:exported="false" />
         <activity
             android:name=".Details"
