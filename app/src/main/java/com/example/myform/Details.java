@@ -28,27 +28,13 @@ public class Details extends AppCompatActivity {
 
         addBtn = findViewById(R.id.addBtn);
 
-        String name = nameEditText.getText().toString();
-        String phone = nameEditText.getText().toString();
-        String email = emailEditText.getText().toString();
-        String branch = branchEditText.getText().toString();
-        String reg = regEditText.getText().toString();
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Details.this, ShowDetails.class);
+                startActivity(intent);
+            }
+        });
 
-
-
-    addBtn.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Intent intent = new Intent(Details.this, ViewDetails.class);
-            intent.putExtra("userName", name);
-            intent.putExtra("userPhone", phone);
-            intent.putExtra("userEmail", email);
-            intent.putExtra("userBranch", branch);
-            intent.putExtra("userReg", reg);
-            startActivity(intent);
-
-        }
-    });
-
-    }
+   }
 }
