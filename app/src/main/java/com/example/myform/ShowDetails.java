@@ -26,11 +26,23 @@ public class ShowDetails extends AppCompatActivity {
         school = findViewById(R.id.school);
         regNo = findViewById(R.id.regNo);
 
+        String uName = getIntent().getStringExtra("name");
+        String uEmail = getIntent().getStringExtra("email");
+        String uPhone = getIntent().getStringExtra("phone");
+        String uBranch = getIntent().getStringExtra("branch");
+        String uReg = getIntent().getStringExtra("reg");
+
+        name.setText(uName);
+        emailID.setText(uEmail);
+        phoneNo.setText(uPhone);
+        school.setText(uBranch);
+        regNo.setText(uReg);
+
         regBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ShowDetails.this, Details.class);
-                startActivity(intent);
+                Intent newIntent = new Intent(ShowDetails.this, Details.class);
+                startActivity(newIntent);
                 finish();
             }
         });
