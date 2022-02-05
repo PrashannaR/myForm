@@ -1,171 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/spot"
-    tools:context=".Details">
-
-
-    <TextView
-        android:id="@+id/AddDetailsText"
-        android:layout_width="wrap_content"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="@string/add_ndetails"
-        android:textColor="@color/blue"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@drawable/spot"
+        tools:context=".Details">
 
-    <TextView
-        android:id="@+id/desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="@string/fill_up_the_form_to_add_in_your_details"
-        android:textColor="#808080"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AddDetailsText" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="@string/name"
-        android:textColorHint="@color/grey"
-        app:boxCornerRadiusBottomEnd="8dp"
-        app:boxStrokeColor="@color/grey"
-        app:endIconMode="clear_text"
-        app:endIconTint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/desc">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nameEditText"
-            android:layout_width="250dp"
-            android:singleLine="true"
-            android:nextFocusForward="@id/phoneEditText"
+        <TextView
+            android:id="@+id/AddDetailsText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="44dp"
+            android:text="@string/add_ndetails"
+            android:textColor="@color/blue"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/phoneInputLayout"
-        android:layout_width="250dp"
-        app:endIconTint="@color/black"
-        app:boxStrokeColor="@color/grey"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/grey"
-        app:layout_constraintTop_toBottomOf="@+id/nameInputLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:hint="@string/phone_number"
-        android:layout_marginTop="16dp"
-        app:endIconMode="clear_text">
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/fill_up_the_form_to_add_in_your_details"
+            android:textColor="#808080"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AddDetailsText" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/phoneEditText"
-            android:inputType="number"
-            android:textColor="@color/black"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/name"
+            android:textColorHint="@color/grey"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxStrokeColor="@color/grey"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/desc">
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/emailInputLayout"
-        android:layout_width="250dp"
-        app:endIconTint="@color/black"
-        app:boxStrokeColor="@color/grey"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/grey"
-        app:layout_constraintTop_toBottomOf="@+id/phoneInputLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:hint="@string/e_mail"
-        android:layout_marginTop="16dp"
-        app:endIconMode="clear_text">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameEditText"
+                android:layout_width="250dp"
+                android:singleLine="true"
+                android:nextFocusForward="@id/phoneEditText"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailEditText"
-            android:textColor="@color/black"
-            android:inputType="textEmailAddress"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/phoneInputLayout"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            app:endIconTint="@color/black"
+            app:boxStrokeColor="@color/grey"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/nameInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="@string/phone_number"
+            android:layout_marginTop="16dp"
+            app:endIconMode="clear_text">
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/branchInputLayout"
-        android:layout_width="250dp"
-        app:endIconTint="@color/black"
-        app:boxStrokeColor="@color/grey"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/grey"
-        app:layout_constraintTop_toBottomOf="@+id/emailInputLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:hint="@string/branch"
-        android:layout_marginTop="16dp"
-        app:endIconMode="clear_text">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phoneEditText"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/branchEditText"
-            android:textColor="@color/black"
-            android:singleLine="true"
-            android:nextFocusForward="@id/regEditText"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/emailInputLayout"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            app:endIconTint="@color/black"
+            app:boxStrokeColor="@color/grey"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/phoneInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="@string/e_mail"
+            android:layout_marginTop="16dp"
+            app:endIconMode="clear_text">
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/regInputLayout"
-        android:layout_width="250dp"
-        app:endIconTint="@color/black"
-        app:boxStrokeColor="@color/grey"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/grey"
-        app:layout_constraintTop_toBottomOf="@+id/branchInputLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:hint="@string/registration_number"
-        android:layout_marginTop="16dp"
-        app:endIconMode="clear_text">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEditText"
+                android:textColor="@color/black"
+                android:inputType="textEmailAddress"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/regEditText"
-            android:textColor="@color/black"
-            android:singleLine="true"
-            android:imeOptions="actionDone"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/branchInputLayout"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            app:endIconTint="@color/black"
+            app:boxStrokeColor="@color/grey"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/emailInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="@string/branch"
+            android:layout_marginTop="16dp"
+            app:endIconMode="clear_text">
 
-    <Button
-        android:id="@+id/addBtn"
-        android:layout_width="130dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:backgroundTint="@color/blue"
-        android:text="@string/add_details"
-        android:textAllCaps="false"
-        app:cornerRadius="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regInputLayout"
-        tools:ignore="TextContrastCheck" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/branchEditText"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:nextFocusForward="@id/regEditText"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/regInputLayout"
+            android:layout_width="250dp"
+            app:endIconTint="@color/black"
+            app:boxStrokeColor="@color/grey"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/branchInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="@string/registration_number"
+            android:layout_marginTop="16dp"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regEditText"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="130dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/add_details"
+            android:textAllCaps="false"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regInputLayout"
+            tools:ignore="TextContrastCheck" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
