@@ -55,16 +55,12 @@ public class Details extends AppCompatActivity {
                         Toast.makeText(Details.this, "An error occurred", Toast.LENGTH_SHORT).show();
                     }
 
+                    // add data in database
                     DBHelper dbHelper = new DBHelper(Details.this);
                     dbHelper.add(model);
 
 
                     Intent intent = new Intent(Details.this, ShowDetails.class);
-//                    intent.putExtra("name", name);
-//                    intent.putExtra("phone", phone);
-//                    intent.putExtra("email", email);
-//                    intent.putExtra("branch", branch);
-//                    intent.putExtra("reg",reg);
                     startActivity(intent);
 
                 }
@@ -74,6 +70,7 @@ public class Details extends AppCompatActivity {
 
    }
 
+   //validate inputs
     private Boolean check(String name, String phone, String email, String branch, String reg) {
         if (name.length()==0){
             nameInputLayout.requestFocus();
@@ -113,49 +110,5 @@ public class Details extends AppCompatActivity {
 
         return null;
     }
-//
-//    private void checkValid() {
-//        if (nameInputLayout.getEditText().getText().toString().isEmpty()){
-//            nameInputLayout.setError("Required");
-//        }else if(phoneInputLayout.getEditText().getText().toString().isEmpty()){
-//            phoneInputLayout.setError("Required");
-//        }else if(emailInputLayout.getEditText().getText().toString().isEmpty()){
-//            emailInputLayout.setError("Required");
-//        }else if(branchInputLayout.getEditText().getText().toString().isEmpty()){
-//            branchInputLayout.setError("Required");
-//        }else if(regInputLayout.getEditText().getText().toString().isEmpty()){
-//            regInputLayout.setError("Required");
-//        }
-//        else{
-//
-//            //getText
-//            String name = nameInputLayout.getEditText().getText().toString();
-//            String phone = phoneInputLayout.getEditText().getText().toString();
-//            String email = emailInputLayout.getEditText().getText().toString();
-//            String branch = branchInputLayout.getEditText().getText().toString();
-//            String reg = regInputLayout.getEditText().getText().toString();
-//
-//            Model model;
-//
-//            try {
-//                model = new Model(-1, name, phone, email, branch, reg);
-//            }catch (Exception e){
-//                model = new Model(-1, "error", "error", "error", "error", "error");
-//
-//            }
-//
-//            Intent intent = new Intent(Details.this, ShowDetails.class);
-//            intent.putExtra("name", name);
-//            intent.putExtra("phone", phone);
-//            intent.putExtra("email", email);
-//            intent.putExtra("branch", branch);
-//            intent.putExtra("reg",reg);
-//            startActivity(intent);
-//
-//            DBHelper dbHelper = new DBHelper(Details.this);
-//            boolean success = dbHelper.add(model);
-//            //Toast.makeText(Details.this, "Payo: " + success, Toast.LENGTH_SHORT).show();
-//
-//        }
-//    }
+
 }
