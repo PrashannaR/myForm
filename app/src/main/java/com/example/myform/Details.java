@@ -47,12 +47,24 @@ public class Details extends AppCompatActivity {
                 boolean validate = check(name, phone, email, branch, reg);
 
                 if (validate){
+                    Model model;
+                    try {
+                        model = new Model(-1, name, phone, email, branch, reg);
+                    }catch (Exception e){
+                        model = new Model(-1, "error", "error", "error", "error", "error");
+                        Toast.makeText(Details.this, "An error occurred", Toast.LENGTH_SHORT).show();
+                    }
+
+                    DBHelper dbHelper = new DBHelper(Details.this);
+                    dbHelper.add(model);
+
+
                     Intent intent = new Intent(Details.this, ShowDetails.class);
-                    intent.putExtra("name", name);
-                    intent.putExtra("phone", phone);
-                    intent.putExtra("email", email);
-                    intent.putExtra("branch", branch);
-                    intent.putExtra("reg",reg);
+//                    intent.putExtra("name", name);
+//                    intent.putExtra("phone", phone);
+//                    intent.putExtra("email", email);
+//                    intent.putExtra("branch", branch);
+//                    intent.putExtra("reg",reg);
                     startActivity(intent);
 
                 }
@@ -66,10 +78,6 @@ public class Details extends AppCompatActivity {
         if (name.length()==0){
             nameInputLayout.requestFocus();
             nameInputLayout.setError("Enter Your Name");
-            return false;
-        }else if (!name.matches("[a-zA-Z]+")){
-            nameInputLayout.requestFocus();
-            nameInputLayout.setError("Enter Valid Name");
             return false;
         }
         else if(phone.length()==0){

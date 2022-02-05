@@ -2,6 +2,7 @@ package com.example.myform.database;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -60,6 +61,16 @@ public class DBHelper extends SQLiteOpenHelper {
         }
 
     }
+
+
+    public Cursor ViewData(){
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+        String query = "SELECT USER_NAME, USER_PHONE, USER_EMAIL, USER_BRANCH, USER_REG FROM USER_TABLE";
+        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+
+        return cursor;
+    }
+
 
 
 }
